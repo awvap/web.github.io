@@ -1,0 +1,352 @@
+/* Mobile First стили */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f0f8ff;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* Шапка - 100% ширины на мобильных */
+header {
+    background: linear-gradient(135deg, #0077b6, #00b4d8);
+    width: 100%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo img {
+    height: 50px;
+    filter: brightness(0) invert(1);
+}
+
+.site-title h1 {
+    margin: 0;
+    font-size: 1.2em;
+    color: white;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+/* Навигация - вертикальный список на мобильных */
+nav {
+    width: 100%;
+    background: linear-gradient(135deg, #0096c7, #00b4d8);
+}
+
+.nav-menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.nav-menu li {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.nav-menu li:last-child {
+    border-bottom: none;
+}
+
+.nav-menu a {
+    display: block;
+    text-decoration: none;
+    color: white;
+    padding: 15px;
+    transition: background-color 0.3s;
+}
+
+.nav-menu a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Основной контент - Flexbox с order для мобильных */
+.content-wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 20px 15px;
+    gap: 20px;
+    background-color: white;
+    min-height: calc(100vh - 200px);
+}
+
+/* Используем order для изменения порядка на мобильных */
+.table-section {
+    order: 1;
+    /* Таблица первой на мобильных */
+}
+
+.links-section {
+    order: 2;
+    /* Список ссылок вторым */
+}
+
+.form-section {
+    order: 3;
+    /* Форма третьей */
+}
+
+/* Стили для секций */
+section {
+    margin-bottom: 0;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    border: 1px solid #e0f7ff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Заголовки */
+h1,
+h2 {
+    color: #0077b6;
+}
+
+h1 {
+    border-bottom: 2px solid #90e0ef;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+h2 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    color: #0096c7;
+}
+
+/* Таблица */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 15px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+table th,
+table td {
+    border: 1px solid #caf0f8;
+    padding: 10px;
+    text-align: left;
+}
+
+table th {
+    background: linear-gradient(135deg, #0077b6, #0096c7);
+    color: white;
+    font-weight: bold;
+}
+
+table tr:nth-child(even) {
+    background-color: #f8fdff;
+}
+
+table tr:hover {
+    background-color: #e0f7ff;
+}
+
+/* Форма */
+form {
+    margin: 15px 0;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #0077b6;
+}
+
+form input[type="text"],
+form input[type="tel"],
+form input[type="email"],
+form input[type="date"],
+form textarea,
+form select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #90e0ef;
+    border-radius: 4px;
+    background-color: white;
+    transition: border-color 0.3s;
+}
+
+form input:focus,
+form textarea:focus,
+form select:focus {
+    outline: none;
+    border-color: #0077b6;
+    box-shadow: 0 0 5px rgba(0, 119, 182, 0.3);
+}
+
+form input[type="radio"],
+form input[type="checkbox"] {
+    margin-right: 8px;
+}
+
+button[type="submit"] {
+    background: linear-gradient(135deg, #0077b6, #0096c7);
+    color: white;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background 0.3s;
+    width: 100%;
+}
+
+button[type="submit"]:hover {
+    background: linear-gradient(135deg, #0096c7, #00b4d8);
+}
+
+/* Подвал */
+footer {
+    background: linear-gradient(135deg, #0077b6, #0096c7);
+    color: white;
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Ссылки */
+a {
+    color: #0077b6;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: #00b4d8;
+    text-decoration: underline;
+}
+
+/* Списки */
+ul,
+ol {
+    margin: 15px 0;
+    padding-left: 20px;
+}
+
+li {
+    margin-bottom: 8px;
+}
+
+/* Изображения */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Media Query для планшетов (min-width: 768px) */
+@media screen and (min-width: 768px) {
+    .header-content {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .site-title h1 {
+        font-size: 1.5em;
+    }
+
+    /* Навигация - горизонтальное меню на планшетах/десктопах */
+    .nav-menu {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .nav-menu li {
+        border-bottom: none;
+        border-right: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .nav-menu li:last-child {
+        border-right: none;
+    }
+
+    .nav-menu a {
+        padding: 15px 20px;
+    }
+
+    /* Возвращаем исходный порядок для планшетов и десктопов */
+    .table-section {
+        order: 0;
+    }
+
+    .links-section {
+        order: 0;
+    }
+
+    .form-section {
+        order: 0;
+    }
+
+    .content-wrapper {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 30px 15px;
+    }
+
+    button[type="submit"] {
+        width: auto;
+    }
+}
+
+/* Media Query для десктопов (min-width: 1024px) */
+@media screen and (min-width: 1024px) {
+    .content-wrapper {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .table-section {
+        flex: 2;
+        min-width: 300px;
+    }
+
+    .links-section {
+        flex: 1;
+        min-width: 250px;
+    }
+
+    .form-section {
+        flex: 100%;
+    }
+
+    .nav-menu {
+        justify-content: flex-start;
+        padding-left: 15px;
+    }
+
+    /* Улучшаем форму для десктопов */
+    .form-group {
+        display: flex;
+        flex-direction: column;
+    }
+
+    form input[type="text"],
+    form input[type="tel"],
+    form input[type="email"],
+    form input[type="date"],
+    form textarea,
+    form select {
+        max-width: 400px;
+    }
+}
