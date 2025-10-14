@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Задание 3 - Адаптивный сайт</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="logo">
+                <img src="galaxy.jpg" alt="Логотип">
+            </div>
+            <div class="site-title">
+                <h1>Сайт Павла Бондаренко</h1>
+            </div>
+        </div>
+    </header>
+
+    <nav>
+        <ul class="nav-menu">
+            <li><a href="#links">Ссылки</a></li>
+            <li><a href="#table">Таблица</a></li>
+            <li><a href="#form">Форма</a></li>
+            <li><a href="#calculator">Калькулятор</a></li>
+        </ul>
+    </nav>
+
+    <main class="content-wrapper">
+        <section class="table-section" id="table">
+            <h2>Таблица</h2>
+            <table>
+                <tr>
+                    <th colspan="4">Заголовок таблицы</th>
+                </tr>
+                <tr>
+                    <th>Колонка 1</th>
+                    <th>Колонка 2</th>
+                    <th>Колонка 3</th>
+                    <th>Колонка 4</th>
+                </tr>
+                <tr>
+                    <td>Ячейка 1</td>
+                    <td>Ячейка 2</td>
+                    <td>Ячейка 3</td>
+                    <td>Ячейка 4</td>
+                </tr>
+                <tr>
+                    <td rowspan="2">Объединённая</td>
+                    <td>Ячейка</td>
+                    <td>Ячейка</td>
+                    <td>Ячейка</td>
+                </tr>
+                <tr>
+                    <td>Ячейка</td>
+                    <td colspan="2">Объединённые</td>
+                </tr>
+                <tr>
+                    <td>Ячейка</td>
+                    <td>Ячейка</td>
+                    <td>Ячейка</td>
+                    <td>Ячейка</td>
+                </tr>
+            </table>
+        </section>
+
+        <section class="links-section" id="links">
+            <h2>Маркированный список гиперссылок</h2>
+            <ul>
+                <li><a href="http://kubsu.ru/">Абсолютная гиперссылка на главную страницу сайта kubsu.ru</a></li>
+                <li><a href="https://kubsu.ru/">Абсолютная на главную сайта kubsu.ru в протоколе https</a></li>
+                <li><a href="https://kubsu.ru/"><img src="moon.jpg" alt="Ссылка-изображение"></a></li>
+                <li><a href="/internal-page">Сокращенная ссылка на внутреннюю страницу</a></li>
+                <li><a href="/">Сокращенная ссылка на главную страницу</a></li>
+                <li><a href="#fragment">Ссылка на фрагмент текущей страницы</a></li>
+                <li><a href="https://example.com/page?param1=value1&param2=value2&param3=value3">Ссылка с тремя параметрами в URL</a></li>
+                <li><a href="https://example.com/page?id=123">Ссылка с параметром id в URL</a></li>
+                <li><a href="current-page.html">Относительная на страницу в текущем каталоге</a></li>
+                <li><a href="about/page.html">Относительная на страницу в каталоге about</a></li>
+                <li><a href="../page.html">Относительная на страницу в каталоге уровнем выше текущего</a></li>
+                <li><a href="../../page.html">Относительная на страницу в каталоге двумя уровнями выше</a></li>
+                <li>Это <a href="https://example.com/">контекстная ссылка</a> в тексте абзаца</li>
+                <li><a href="https://example.com/page#section">Ссылка на фрагмент страницы стороннего сайта</a></li>
+                <li>
+                    Ссылки из прямоугольных и круглых областей картинки:
+                    <br>
+                    <img src="img.jpg" alt="" usemap="#Map">
+                    <map name="Map">
+                        <area shape="rect" coords="172,17,288,131" href="https://kubsu.ru/" alt="Прямоугольная область" title="Прямоугольник (172,17,288,131)">
+                        <area shape="circle" coords="69,80,57" href="https://kubsu.ru/" alt="Круглая область" title="Круг (центр: 69,80; радиус: 57)">
+                    </map>
+                </li>
+                <li><a href="">Ссылка с пустым href</a></li>
+                <li><a>Ссылка без href</a></li>
+                <li><a href="https://kubsu.ru/" rel="nofollow">Ссылка, по которой запрещен переход поисковикам</a></li>
+                <li><a href="https://kubsu.ru/" rel="noindex">Запрещенная для индексации поисковиками</a></li>
+            </ul>
+
+            <h2>Нумерованный список ссылок с подписями title</h2>
+            <ol>
+                <li><a href="https://example.com" title="Ссылка 1">Ссылка 1</a></li>
+                <li><a href="https://example.com" title="Ссылка 2">Ссылка 2</a></li>
+                <li><a href="https://example.com" title="Ссылка 3">Ссылка 3</a></li>
+            </ol>
+
+            <h2>Ссылка на FTP с авторизацией</h2>
+            <p><a href="ftp://user:password@example.com/myfile.zip">Файл на FTP сервере</a></p>
+        </section>
+
+        <section class="form-section" id="form">
+            <h2>Форма</h2>
+            <form action="/" method="POST">
+                <div class="form-group">
+                    <label for="fio">ФИО:</label>
+                    <input type="text" id="fio" name="fio" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Телефон:</label>
+                    <input type="tel" id="phone" name="phone">
+                </div>
+
+                <div class="form-group">
+                    <label for="email">E-mail:</label>
+                    <input type="email" id="email" name="email">
+                </div>
+
+                <div class="form-group">
+                    <label for="birthdate">Дата рождения:</label>
+                    <input type="date" id="birthdate" name="birthdate">
+                </div>
+
+                <div class="form-group">
+                    <span>Пол:</span>
+                    <label><input type="radio" name="gender" value="male"> Мужской</label>
+                    <label><input type="radio" name="gender" value="female"> Женский</label>
+                </div>
+
+                <div class="form-group">
+                    <label for="languages">Любимый язык программирования:</label>
+                    <select id="languages" name="languages[]" multiple>
+                        <option value="Pascal">Pascal</option>
+                        <option value="C">C</option>
+                        <option value="C++">C++</option>
+                        <option value="JavaScript">JavaScript</option>
+                        <option value="PHP">PHP</option>
+                        <option value="Python">Python</option>
+                        <option value="Java">Java</option>
+                        <option value="Haskel">Haskel</option>
+                        <option value="Clojure">Clojure</option>
+                        <option value="Prolog">Prolog</option>
+                        <option value="Scala">Scala</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="bio">Биография:</label>
+                    <textarea id="bio" name="bio"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label><input type="checkbox" name="contract"> С контрактом ознакомлен(а)</label>
+                </div>
+
+                <button type="submit">Сохранить</button>
+            </form>
+        </section>
+
+        <section class="calculator-section" id="calculator">
+            <h2>Калькулятор стоимости заказа</h2>
+            <div class="calculator">
+                <div class="form-group">
+                    <label for="product">Выберите товар:</label>
+                    <select id="product" name="product">
+                        <option value="1000">Смартфон - 1000 руб.</option>
+                        <option value="2500">Ноутбук - 2500 руб.</option>
+                        <option value="500">Наушники - 500 руб.</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="quantity">Количество товара:</label>
+                    <input type="text" id="quantity" name="quantity" placeholder="Введите количество">
+                    <div id="error-message" class="error-message"></div>
+                </div>
+                
+                <button id="calculate-btn">Рассчитать стоимость</button>
+                
+                <div id="result" class="result"></div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; Бондаренко Павел</p>
+    </footer>
+
+    <script src="calculator.js" defer></script>
+</body>
+</html>
